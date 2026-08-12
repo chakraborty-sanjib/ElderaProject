@@ -45,9 +45,8 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">Sanjib.Chakraborty@ibm.com</value>
-    <value name="createdDate">1786543642360</value>
-    <value name="lastModifiedDate">1786543642360</value>
+    <value name="lastModifiedBy">Sanjib.Chakraborty@ibm.com</value>
+    <value name="lastModifiedDate">1786575878016</value>
     <value name="displayName">kkii</value>
     <value name="description"></value>
     <record name="stepNodeHints" javaclass="com.wm.util.Values">
@@ -67,6 +66,23 @@
         </record>
         <null name="outputMapSet"/>
         <null name="mapSet"/>
+        <Boolean name="serviceReferenceResolved">true</Boolean>
+        <value name="nodePathForDebug">0</value>
+      </record>
+      <null name="/1"/>
+      <record name="/1/0" javaclass="com.wm.util.Values">
+        <null name="name"/>
+        <value name="itemType">SERVICES</value>
+        <record name="serviceInfo" javaclass="com.wm.util.Values">
+          <value name="groupDisplayName">Math</value>
+          <value name="groupName">math</value>
+          <null name="services"/>
+        </record>
+        <record name="serviceName" javaclass="com.wm.util.Values">
+          <value name="displayName">addIntList</value>
+          <value name="serviceName">pub.math:addIntList</value>
+          <value name="transformerSupport">true</value>
+        </record>
       </record>
     </record>
   </record>
