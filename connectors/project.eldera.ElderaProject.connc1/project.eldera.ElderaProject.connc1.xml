@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rest-connector xmlns="http://www.webmethods.com/cloudstreams/metadata/handler/model" id="project.eldera.ElderaProject.connc1" version="1.0" name="connc1" displayName="connc1">
+    <connections>
+        <connection type="sagcloud" name="connc1connection" displayName="connc1connection">
+            <groups>
+                <group type="connection" name="connection" displayName="Connection">
+                    <description>Define the required connection configurations to initiate communication with the SaaS provider.</description>
+                    <fields>
+                        <field isRequired="true" isEncrypted="false" isHidden="false" isArray="false" defaultValue="/get1" name="cn.providerUrl" displayName="Server URL">
+                            <description>The native provider endpoint target for the connection configuration</description>
+                        </field>
+                    </fields>
+                </group>
+                <group type="oauth_v10a" name="oauth_v10a" displayName="OAuth V1.0a">
+                    <description>Define the configurations needed for the OAuth version 1.0a authentication scheme.</description>
+                    <fields/>
+                </group>
+            </groups>
+        </connection>
+    </connections>
+    <services>
+        <service xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RESTServiceType" endpoint="${cn.providerUrl}" name="connc1service" displayName="connc1service">
+            <documentModel packageName="." nsName="project.eldera.ElderaProject.connc1.connc1service.doctypes" useInlineModel="false"/>
+            <resources>
+                <resource method="POST" path="/ret1" type="SIMPLE" tag="ret1" name="postret1" displayName="postret1">
+                    <mappings>
+                        <map isRequired="true" context="OUT" name="X-AP">
+                            <source type="LITERAL">21</source>
+                            <target type="HEADER">X-AP</target>
+                        </map>
+                    </mappings>
+                    <parameters/>
+                    <responses>
+                        <response name="bh1" code="401" messageFormatterType="application/octet+idataoref" builderType="application/json" documentRef="project.eldera.ElderaProject.connc1.connc1service.doctypes:bh1" excludeRoot="true" dimension="1" isErrorDocument="true"/>
+                    </responses>
+                </resource>
+            </resources>
+        </service>
+    </services>
+</rest-connector>
