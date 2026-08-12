@@ -1,0 +1,7 @@
+CustomerID,FirstName,LastName,Email,Country,JoinDate,TotalSpend
+1001,John,Doe,john.doe@example.com,United States,2025-01-15,150.50
+1002,Jane,Smith,jane.smith@example.com,Canada,2025-02-20,320.00
+1003,Carlos,Ruiz,carlos.r@example.com,Spain,2025-03-05,45.25
+1004,Yuki,Tanaka,yuki.t@example.com,Japan,2025-04-12,890.75
+1005,Chloe,Dubois,chloe.d@example.com,France,2025-05-18,120.00
+
