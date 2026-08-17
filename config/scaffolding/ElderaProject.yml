@@ -8,13 +8,108 @@ packages:
   gitUsername: chakraborty-sanjib
   gitBranch: main
 - name: WmAdobeSignProvider
+  version: 12.0.0.0.5
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
   wpmVersion: v12.0.0
 - name: OpenWeatherClient
+  version: "1.0"
   wpmServer: https://packages.webmethods.io
   wpmRegistry: public
   wpmVersion: latest
+- name: WmCloudStreams
+  version: 12.1.0
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+services:
+- serviceName: project.eldera.integrations:kkii
+  packages:
+  - name: ElderaProject
+    version: "1.0"
+  - name: WmCloudStreams
+    version: 12.1.0.1.277
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmAdobeSignProvider
+    version: 12.0.0.0.5
+  - name: OpenWeatherClient
+    version: "1.0"
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1070
+- serviceName: pub.math:addIntList
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1070
+- serviceName: project.eldera.integrations:niteri
+  packages:
+  - name: ElderaProject
+    version: "1.0"
+  - name: WmCloudStreams
+    version: 12.1.0.1.277
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmAdobeSignProvider
+    version: 12.0.0.0.5
+  - name: OpenWeatherClient
+    version: "1.0"
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1070
+- serviceName: pub.flow:getLastFailureCaught
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1070
+- serviceName: project.eldera.referencedata:reff1
+  packages:
+  - name: ElderaProject
+    version: "1.0"
+  - name: WmCloudStreams
+    version: 12.1.0.1.277
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmAdobeSignProvider
+    version: 12.0.0.0.5
+  - name: OpenWeatherClient
+    version: "1.0"
+- serviceName: wm.cloudstreams.eldera.ElderaProject.plm:registerProvider
+  packages:
+  - name: ElderaProject
+    version: "1.0"
+  - name: WmCloudStreams
+    version: 12.1.0.1.277
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmAdobeSignProvider
+    version: 12.0.0.0.5
+  - name: OpenWeatherClient
+    version: "1.0"
+- serviceName: wm.cloudstreams.provider.lifecycle.bootstrap:registerProvider
+  packages:
+  - name: WmCloudStreams
+    version: 12.1.0.1.277
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: wm.cloudstreams.eldera.ElderaProject.plm:unregisterProvider
+  packages:
+  - name: ElderaProject
+    version: "1.0"
+  - name: WmCloudStreams
+    version: 12.1.0.1.277
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmAdobeSignProvider
+    version: 12.0.0.0.5
+  - name: OpenWeatherClient
+    version: "1.0"
+- serviceName: wm.cloudstreams.provider.lifecycle.bootstrap:unregisterProvider
+  packages:
+  - name: WmCloudStreams
+    version: 12.1.0.1.277
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
